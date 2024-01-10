@@ -1,0 +1,13 @@
+{
+  "name": "com.tiogiras.megapint-alphabutton",
+  "displayName": "megapint-alphabutton",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "keywords": [
+    "2d",
+    "sprite",
+    "sprite editor window"
+  ],
+  "category": "2D",
+  "description": "MegaPint package for an button component that uses the build in alphatransparency"
+}
