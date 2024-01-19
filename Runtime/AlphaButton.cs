@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AlphaButtonObserver))]
 public class AlphaButton : Button
 {
     [Tooltip("Alpha threshold for interacting with the button")]
