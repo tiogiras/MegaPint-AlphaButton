@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using ValidationRequirement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-using UnityEngine.UI;
-using ValidationRequirement;
 
 namespace com.tiogiras.megapint_alphabutton.Runtime
 {
 
 public class RequireAlphaButtons : ScriptableValidationRequirement
 {
-    protected override void OnInitialization() { }
+    #region Protected Methods
+
+    protected override void OnInitialization()
+    {
+    }
 
     protected override void Validate(GameObject gameObject)
     {
@@ -26,20 +30,24 @@ public class RequireAlphaButtons : ScriptableValidationRequirement
             if (!castedImage.sprite.texture.isReadable)
                 incorrectButtons++;
         }
-        
+
         if (incorrectButtons <= 0)
             return;
 
         var str = incorrectButtons > 1 ? "s" : "";
         var str1 = incorrectButtons > 1 ? "are" : "is";
-        
+
         AddError(
             $"Texture{str} not readable",
             $"Sprite texture{str} of {incorrectButtons} button{str} {str1} not readable",
             ValidationState.Error,
             FixAction);
     }
-    
+
+    #endregion
+
+    #region Private Methods
+
     private void FixAction(GameObject gameObject)
     {
 #if UNITY_EDITOR
@@ -61,6 +69,8 @@ public class RequireAlphaButtons : ScriptableValidationRequirement
         }
 #endif
     }
+
+    #endregion
 }
 
 }
