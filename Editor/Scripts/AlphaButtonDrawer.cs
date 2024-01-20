@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using UnityEditor.UI;
 
 namespace Editor.Scripts
@@ -28,3 +29,4 @@ public class AlphaButtonDrawer : ButtonEditor
 }
 
 }
+#endif
