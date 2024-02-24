@@ -2,10 +2,10 @@
   "name": "com.tiogiras.megapint-alphabutton",
   "displayName": "Megapint - AlphaButton",
   "author": "Tiogiras",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2022.3",
   "category": "Tools",
-  "description": "MegaPint package for an button component that uses the build in alphatransparency",
+  "description": "This package adds a new component based on the normal button component that is only clickable where the alpha is greater than a certain threshold.",
   "repository": {
     "url": "https://github.com/tiogiras/MegaPint-AlphaButton.git"
   }
