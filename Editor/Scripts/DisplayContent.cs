@@ -2,6 +2,7 @@
 using Editor.Scripts.PackageManager.Cache;
 using Editor.Scripts.PackageManager.Packages;
 using Editor.Scripts.Windows;
+using UnityEngine;
 using UnityEngine.UIElements;
 using GUIUtility = Editor.Scripts.GUI.GUIUtility;
 
