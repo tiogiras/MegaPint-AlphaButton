@@ -4,6 +4,10 @@ using UnityEngine.UI;
 namespace MegaPint.com.tiogiras.megapint_alphabutton.Runtime.Scripts
 {
 
+/// <summary>
+///     Component derived from the <see cref="Button" /> component that gives access ti the internal
+///     <see cref="Image.alphaHitTestMinimumThreshold" />
+/// </summary>
 [RequireComponent(typeof(AlphaButtonObserver))]
 public class AlphaButton : Button
 {
