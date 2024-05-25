@@ -1,6 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace MegaPint
+{
+
+/// <summary>
+///     Component derived from the <see cref="Button" /> component that gives access ti the internal
+///     <see cref="Image.alphaHitTestMinimumThreshold" />
+/// </summary>
 public class AlphaButton : Button
 {
     [Tooltip("Alpha threshold for interacting with the button")]
@@ -19,4 +26,6 @@ public class AlphaButton : Button
     }
 
     #endregion
+}
+
 }
