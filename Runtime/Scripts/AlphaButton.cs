@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace MegaPint.com.tiogiras.megapint_alphabutton.Runtime.Scripts
+{
+
 [RequireComponent(typeof(AlphaButtonObserver))]
 public class AlphaButton : Button
 {
