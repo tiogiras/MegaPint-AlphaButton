@@ -1,14 +1,12 @@
-﻿using MegaPint.com.tiogiras.megapint_alphabutton.Runtime.Scripts;
+﻿using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using ValidationRequirement;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
-namespace com.tiogiras.megapint_alphabutton.Runtime
+namespace MegaPint.com.tiogiras.megapint_alphabutton.Runtime.Scripts
 {
 
+/// <summary> Custom ValidationRequirement for <see cref="AlphaButton" /> components </summary>
 public class RequireAlphaButtons : ScriptableValidationRequirement
 {
     #region Protected Methods
@@ -49,7 +47,7 @@ public class RequireAlphaButtons : ScriptableValidationRequirement
 
     #region Private Methods
 
-    private void FixAction(GameObject gameObject)
+    private static void FixAction(GameObject gameObject)
     {
 #if UNITY_EDITOR
         AlphaButton[] buttons = gameObject.GetComponents <AlphaButton>();
