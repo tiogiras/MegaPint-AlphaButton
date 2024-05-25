@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace MegaPint
+{
+
 public class AlphaButton : Button
 {
     [Tooltip("Alpha threshold for interacting with the button")]
@@ -19,4 +22,6 @@ public class AlphaButton : Button
     }
 
     #endregion
+}
+
 }
