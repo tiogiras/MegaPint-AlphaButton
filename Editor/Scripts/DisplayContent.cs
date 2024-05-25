@@ -1,14 +1,13 @@
 #if UNITY_EDITOR
-using Editor.Scripts.PackageManager.Cache;
-using Editor.Scripts.PackageManager.Packages;
-using Editor.Scripts.Windows;
-using UnityEngine;
+using MegaPint.Editor.Scripts.GUI.Utility;
+using MegaPint.Editor.Scripts.PackageManager.Cache;
+using MegaPint.Editor.Scripts.PackageManager.Packages;
 using UnityEngine.UIElements;
-using GUIUtility = Editor.Scripts.GUI.GUIUtility;
 
-namespace Editor.Scripts
+namespace MegaPint.Editor.Scripts
 {
 
+/// <summary> Partial class used to display the right pane in the BaseWindow </summary>
 internal static partial class DisplayContent
 {
     #region Private Methods
@@ -20,19 +19,19 @@ internal static partial class DisplayContent
         VisualElement root = InitializeDisplayContent(refs);
 
         root.Q <Label>("PackageInfo").text = PackageCache.Get(PackageKey.AlphaButton).Description;
-        
-        GUIUtility.ActivateLinks(root,
-                                 evt =>
-                                 {
-                                     switch (evt.linkID)
-                                     {
-                                         case "integration":
-                                             MegaPintPackageManagerWindow.OpenPerLink(PackageKey.AlphaButton);
-                                             break;
-                                     }
-                                 });
+
+        root.ActivateLinks(
+            evt =>
+            {
+                switch (evt.linkID)
+                {
+                    case "integration":
+                        Windows.PackageManager.OpenPerLink(PackageKey.AlphaButton);
+
+                        break;
+                }
+            });
     }
-    
 
     #endregion
 }

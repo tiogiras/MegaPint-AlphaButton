@@ -2,9 +2,10 @@
 using UnityEditor;
 using UnityEditor.UI;
 
-namespace Editor.Scripts
+namespace MegaPint.Editor.Scripts.Drawer
 {
 
+/// <summary> Drawer class for the <see cref="AlphaButton" /> component </summary>
 [CustomEditor(typeof(AlphaButton))]
 public class AlphaButtonDrawer : ButtonEditor
 {
