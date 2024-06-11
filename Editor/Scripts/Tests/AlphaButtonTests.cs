@@ -1,5 +1,6 @@
 ﻿#if UNITY_EDITOR
 #if UNITY_INCLUDE_TESTS
+using MegaPint.com.tiogiras.megapint_alphabutton.Runtime.Scripts;
 using NUnit.Framework;
 using UnityEngine;
 
