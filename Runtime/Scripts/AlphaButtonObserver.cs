@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using ValidationRequirement;
+using MegaPint.ValidationRequirement;
 
 namespace MegaPint.com.tiogiras.megapint_alphabutton.Runtime.Scripts
 {
