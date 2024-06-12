@@ -27,6 +27,22 @@ public class AlphaButton : Button
     }
 
     #endregion
+
+    #region Public Methods
+
+    /// <summary> Set the alphaThreshold of the button </summary>
+    /// <param name="alphaThreshold"> New threshold </param>
+    public void SetAlphaThreshold(float alphaThreshold)
+    {
+        _alphaThreshold = alphaThreshold;
+
+        if (targetGraphic is not Image castedImage)
+            return;
+        
+        castedImage.alphaHitTestMinimumThreshold = _alphaThreshold;
+    }
+
+    #endregion
 }
 
 }
