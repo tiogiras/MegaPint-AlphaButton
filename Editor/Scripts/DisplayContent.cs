@@ -1,8 +1,7 @@
 ﻿#if UNITY_EDITOR
 using MegaPint.Editor.Scripts.GUI.Utility;
-using MegaPint.Editor.Scripts.PackageManager.Cache;
 using MegaPint.Editor.Scripts.PackageManager.Packages;
-using UnityEngine.UIElements;
+using UnityEditor;
 
 namespace MegaPint.Editor.Scripts
 {
@@ -16,19 +15,38 @@ internal static partial class DisplayContent
     // ReSharper disable once UnusedMember.Local
     private static void AlphaButton(DisplayContentReferences refs)
     {
-        VisualElement root = InitializeDisplayContent(refs);
-
-        root.Q <Label>("PackageInfo").text = PackageCache.Get(PackageKey.AlphaButton).Description;
-
-        root.ActivateLinks(
-            evt =>
+        InitializeDisplayContent(
+            refs,
+            new TabSettings {info = true, help = true},
+            new TabActions
             {
-                switch (evt.linkID)
+                info = root =>
                 {
-                    case "integration":
-                        Windows.PackageManager.OpenPerLink(PackageKey.AlphaButton);
+                    root.ActivateLinks(
+                        evt =>
+                        {
+                            switch (evt.linkID)
+                            {
+                                case "integration":
+                                    Windows.PackageManager.OpenPerLink(PackageKey.AlphaButton);
 
-                        break;
+                                    break;
+                            }
+                        });
+                },
+                help = root =>
+                {
+                    root.ActivateLinks(
+                        evt =>
+                        {
+                            switch (evt.linkID)
+                            {
+                                case "packageManager":
+                                    EditorApplication.ExecuteMenuItem(Constants.BasePackage.Links.PackageManager);
+
+                                    break;
+                            }
+                        });
                 }
             });
     }
