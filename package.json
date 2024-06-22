@@ -1,11 +1,11 @@
 {
   "name": "com.tiogiras.megapint-alphabutton",
-  "displayName": "Megapint - AlphaButton",
+  "displayName": "MegaPint - AlphaButton",
   "author": "Tiogiras",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "unity": "2022.3",
   "category": "Tools",
-  "description": "This package adds a new component based on the normal button component that is only clickable where the alpha is greater than a certain threshold.",
+  "description": "<b>STOP</b> with simple rectangular buttons!\n\nAlphaButton is an improved Button component that allows you to utilize the alpha of your sprites to make the button only clickable when the mouse is over the actual graphic.",
   "repository": {
     "url": "https://github.com/tiogiras/MegaPint-AlphaButton.git"
   }
