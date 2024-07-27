@@ -8,6 +8,7 @@ namespace MegaPint
 ///     Component derived from the <see cref="Button" /> component that gives access ti the internal
 ///     <see cref="Image.alphaHitTestMinimumThreshold" />
 /// </summary>
+[AddComponentMenu("MegaPint/AlphaButton")]
 public class AlphaButton : Button
 {
     [Tooltip("Alpha threshold for interacting with the button")]
