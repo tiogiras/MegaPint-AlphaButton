@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using MegaPint.Editor.Scripts.PackageManager.Packages;
 using MegaPint.Editor.Scripts.Tests.Utility;
 using NUnit.Framework;
-using UnityEngine;
 using UnityEngine.TestTools;
 
 namespace MegaPint.Editor.Scripts.Tests
@@ -15,11 +14,14 @@ namespace MegaPint.Editor.Scripts.Tests
 internal class PackageTests
 {
     private static bool s_initialized;
-    
+
+    #region Tests
+
     [UnityTest] [Order(0)]
     public IEnumerator InitializePackageCache()
     {
         Task <bool> task = TestsUtility.CheckCacheInitialization();
+
         yield return task.AsIEnumeratorReturnNull();
 
         s_initialized = task.Result;
@@ -31,11 +33,13 @@ internal class PackageTests
     {
         if (!s_initialized)
             Assert.Fail("FAILED ===> Missing packageCache initialization!");
-        
+
         TestsUtility.CheckStructure(PackageKey.AlphaButton);
     }
-    
+
+    #endregion
 }
+
 }
 #endif
 #endif
