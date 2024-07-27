@@ -38,7 +38,7 @@ public class AlphaButton : Button
 
         if (targetGraphic is not Image castedImage)
             return;
-        
+
         castedImage.alphaHitTestMinimumThreshold = _alphaThreshold;
     }
 

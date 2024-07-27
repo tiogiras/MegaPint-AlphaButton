@@ -7,7 +7,7 @@ namespace MegaPint.com.tiogiras.megapint_alphabutton.Runtime.Scripts
 /// <summary> Observes all <see cref="AlphaButton" /> components on this gameObject and adds validation requirements </summary>
 public class AlphaButtonObserver : ValidatableMonoBehaviour
 {
-    private readonly List <IValidationRequirement> _customRequirements = new() {new RequireAlphaButtons()};
+    private readonly List <ScriptableValidationRequirement> _customRequirements = new() {new RequireAlphaButtons()};
 
     #region Protected Methods
 
