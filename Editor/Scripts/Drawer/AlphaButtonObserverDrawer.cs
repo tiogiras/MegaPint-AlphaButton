@@ -7,7 +7,7 @@ namespace MegaPint.Editor.Scripts.Drawer
 
 /// <summary> Drawer class for the <see cref="AlphaButtonObserver" /> component </summary>
 [CustomEditor(typeof(AlphaButtonObserver))]
-public class AlphaButtonObserverDrawer : UnityEditor.Editor
+internal class AlphaButtonObserverDrawer : UnityEditor.Editor
 {
     #region Public Methods
 

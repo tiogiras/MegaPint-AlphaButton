@@ -8,6 +8,7 @@ namespace MegaPint.com.tiogiras.megapint_alphabutton.Runtime.Scripts
 ///     Component derived from the <see cref="Button" /> component that gives access ti the internal
 ///     <see cref="Image.alphaHitTestMinimumThreshold" />
 /// </summary>
+[AddComponentMenu("MegaPint/AlphaButton")]
 [RequireComponent(typeof(AlphaButtonObserver))]
 public class AlphaButton : Button
 {
@@ -38,7 +39,7 @@ public class AlphaButton : Button
 
         if (targetGraphic is not Image castedImage)
             return;
-        
+
         castedImage.alphaHitTestMinimumThreshold = _alphaThreshold;
     }
 

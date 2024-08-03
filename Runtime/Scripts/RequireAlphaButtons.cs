@@ -1,13 +1,16 @@
 ﻿using MegaPint.ValidationRequirement;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace MegaPint.com.tiogiras.megapint_alphabutton.Runtime.Scripts
 {
 
 /// <summary> Custom ValidationRequirement for <see cref="AlphaButton" /> components </summary>
-public class RequireAlphaButtons : ScriptableValidationRequirement
+internal class RequireAlphaButtons : ScriptableValidationRequirement
 {
     #region Protected Methods
 
@@ -59,7 +62,7 @@ public class RequireAlphaButtons : ScriptableValidationRequirement
 
             if (castedImage.sprite.texture.isReadable)
                 continue;
-
+            
             var path = AssetDatabase.GetAssetPath(castedImage.sprite.texture);
             var importer = (TextureImporter)AssetImporter.GetAtPath(path);
 
