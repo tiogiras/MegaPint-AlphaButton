@@ -1,4 +1,4 @@
-# MegaPint – Alpha Button
+# MegaPint - Alpha Button
 
 ![Unity](https://img.shields.io/badge/Unity-2022%2B-blue.svg?logo=unity)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
